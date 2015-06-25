@@ -21,12 +21,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlertButton(sender: AnyObject) {
-        //UIAlertControllerStyle.Alert          彈跳視窗
+        //UIAlertControllerStyle.Alert  彈跳視窗
         //UIAlertControllerStyle.ActionSheet
-        let alertController = UIAlertController(title: "地點通知", message: "到家了", preferredStyle : UIAlertControllerStyle.ActionSheet)
+        let alertController = UIAlertController(title: "地點通知", message: "到家了", preferredStyle : UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Destructive, handler: nil))
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        //alertController.addTextFieldWithConfigurationHandler {(textField : UITextField!) -> Void in}
+        alertController.addTextFieldWithConfigurationHandler {(textField : UITextField!) -> Void in}
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
